@@ -1,69 +1,109 @@
-# React + TypeScript + Vite
+# 🥤 Vending Machine SPA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Vending Machine SPA** adalah aplikasi simulasi mesin penjual otomatis berbasis web yang dibangun sebagai **Single Page Application (SPA)**. Aplikasi ini mensimulasikan alur nyata vending machine, mulai dari pemilihan produk, pengelolaan keranjang, pembayaran tunai (cash), hingga pencatatan riwayat transaksi.
 
-Currently, two official plugins are available:
+Project ini dirancang dengan arsitektur modern menggunakan **React + TypeScript**, state management **Redux Toolkit**, styling **Tailwind CSS**, serta **JSON Server** sebagai mock backend untuk simulasi API dan penyimpanan data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Fitur Utama
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🧃 **Daftar Produk**
+  - Menampilkan produk dengan harga dan stok
+  - Produk tidak dapat dibeli jika stok habis
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- 🛒 **Keranjang Belanja (Cart Panel)**
+  - Tampil di kolom terpisah dalam halaman yang sama
+  - Update jumlah item secara real-time
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- 💵 **Simulasi Pembayaran Cash**
+  - Input uang menggunakan tombol pecahan:
+    - Rp2.000
+    - Rp5.000
+    - Rp10.000
+    - Rp20.000
+    - Rp50.000
+  - Validasi uang cukup & perhitungan kembalian
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- 🔔 **Toast Notification**
+  - Notifikasi sukses, warning, dan error
+  - Warna toast dapat dikustom
+  - Auto dismiss tanpa reload halaman
+
+- 🧾 **Riwayat Transaksi**
+  - Ditampilkan dalam modal dialog
+  - Berisi detail item, total, dan waktu transaksi
+  - Data transaksi disimpan ke `db.json`
+
+- 📦 **Manajemen Stok**
+  - Stok otomatis berkurang setelah transaksi berhasil
+  - Proteksi jika stok habis
+
+---
+
+## 🧱 Teknologi yang Digunakan
+
+### Frontend
+- React (Vite)
+- TypeScript
+- Redux Toolkit
+- Tailwind CSS
+- React Icons (Font Awesome)
+
+### Backend (Mock API)
+- JSON Server
+
+---
+
+## 🏗️ Arsitektur Aplikasi
+
+- Single Page Application (SPA)
+- Tidak menggunakan routing halaman
+- Semua interaksi (detail produk, pembayaran, riwayat transaksi) ditampilkan dalam **modal dialog**
+- State global dikelola menggunakan Redux
+- UI berbasis komponen yang reusable
+
+---
+
+## 🎯 Tujuan Project
+
+Project ini dibuat untuk:
+
+- Mensimulasikan alur vending machine dunia nyata
+- Menerapkan best practice React + Redux
+- Menjadi portfolio project Frontend / Fullstack Developer
+- Melatih pembuatan aplikasi kiosk-style tanpa routing kompleks
+
+---
+
+## ⚙️ Instalasi & Menjalankan Aplikasi
+
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/username/vending-machine-spa.git
+cd vending-machine-spa
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2️⃣ Install Dependency
+```bash
+npm install
 ```
+
+### 3️⃣ Jalankan JSON Server (Mock Backend)
+```bash
+npm run api
+```
+
+### 4️⃣ Jalankan Frontend (Vite)
+Buka terminal baru
+```bash
+npm run dev
+```
+
+---
+
+## 📸 Screenshot Aplikasi
+> Berikut beberapa tampilan utama dari aplikasi **Vending Machine SPA**:
+
+### 🧃 Halaman Utama (Daftar Produk & Panel Keranjang)
+![Halaman Utama](./screenshots/halaman-utama.png)
