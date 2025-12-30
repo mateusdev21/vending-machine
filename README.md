@@ -106,4 +106,4 @@ npm run dev
 > Berikut beberapa tampilan utama dari aplikasi **Vending Machine SPA**:
 
 ### 🧃 Halaman Utama (Daftar Produk & Panel Keranjang)
-![Halaman Utama](./screenshots/halaman-utama.png)
+![Halaman Utama](./screenshots/halaman-utama.PNG)
