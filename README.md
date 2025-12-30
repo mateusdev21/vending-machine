@@ -107,3 +107,15 @@ npm run dev
 
 ### 🧃 Halaman Utama (Daftar Produk & Panel Keranjang)
 ![Halaman Utama](./screenshots/halaman-utama.PNG)
+
+### 🛒 Cart Panel & Penambahan Item
+![Keranjang](./screenshots/panel-keranjang.PNG)
+
+### 💰 Proses Pembayaran
+![Pembayaran](./screenshots/pembayaran.PNG)
+
+### 🔔 Toast Notification (Payment Berhasil)
+![notifiation](./screenshots/pembayaran-selesai.PNG)
+
+### 🧾 Riwayat Transaksi
+![history](./screenshots/riwayat-transaksi.PNG)
