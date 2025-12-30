@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "./hooks";
+import { fetchProducts } from "./features/productSlice";
 
-function App() {
-  const [count, setCount] = useState(0)
+import ProductGrid from "./components/product/ProductGrid";
+import ProductDetailModal from "./components/product/ProductDetailModal";
+import CartPanel from "./components/cart/CartPanel";
+import CashPaymentModal from "./components/payment/PaymentModal";
+import NotificationToast from "./components/common/NotificationToast";
+import TransactionHistoryModal from "./components/transaction/TransactionHistoryModal";
+
+export default function App() {
+  const dispatch = useAppDispatch();
+  const modal = useAppSelector(state => state.modal.type);
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, [dispatch]);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="grid grid-cols-[2fr_1fr]">
+      <NotificationToast />
+      {/* LEFT: PRODUCT */}
+      <div className="overflow-hidden mt-0 pt-0">
+        <ProductGrid />
       </div>
-      <h1 className='text-red-500'>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
 
-export default App
+      {/* RIGHT: CART */}
+      <div className="p-4 min-w-full">
+        <CartPanel />
+      </div>
+
+      {/* MODALS */}
+      {modal === "PRODUCT" && <ProductDetailModal />}
+      {modal === "PAYMENT" && <CashPaymentModal />}
+      {modal === "TRANSACTION_HISTORY" && (
+        <TransactionHistoryModal />
+      )}
+    </div>
+  );
+}

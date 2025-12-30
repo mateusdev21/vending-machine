@@ -1,0 +1,256 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Coca Cola 250 ml",
+      "price": 8000,
+      "stock": 10,
+      "image": "/images/product/cocacola250.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Kopi Kenangan - Caffe Latte",
+      "price": 7500,
+      "stock": 5,
+      "image": "/images/product/kopikenangan-caffelatte.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Kopi Kenangan - Royal Cheese Latte",
+      "price": 12000,
+      "stock": 5,
+      "image": "/images/product/kopikenangan-royalcheese.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Sprite 250 ml",
+      "price": 10000,
+      "stock": 5,
+      "image": "/images/product/sprite.png"
+    },
+    {
+      "id": 5,
+      "name": "Kit Kat 4F",
+      "price": 13500,
+      "stock": 15,
+      "image": "/images/product/kitkat.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Sari Roti - Choco Cheese Bun",
+      "price": 7000,
+      "stock": 12,
+      "image": "/images/product/sariroti-chococheesebun.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Cadbury Dairy Milk - Prime Size",
+      "price": 20000,
+      "stock": 0,
+      "image": "/images/product/cadbury.jpg"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "cc90",
+      "items": [
+        {
+          "id": 3,
+          "name": "Kopi Kenangan - Royal Cheese Latte",
+          "price": 12000,
+          "stock": 5,
+          "image": "/images/product/kopikenangan-royalcheese.jpg",
+          "qty": 1
+        }
+      ],
+      "total": 12000,
+      "paid": 20000,
+      "change": 8000,
+      "createdAt": "2025-12-30T16:57:22.491Z"
+    },
+    {
+      "id": "c38a",
+      "items": [
+        {
+          "id": 5,
+          "name": "Kit Kat 4F",
+          "price": 13500,
+          "stock": 15,
+          "image": "/images/product/kitkat.jpg",
+          "qty": 1
+        },
+        {
+          "id": 6,
+          "name": "Sari Roti - Choco Cheese Bun",
+          "price": 7000,
+          "stock": 12,
+          "image": "/images/product/sariroti-chococheesebun.jpg",
+          "qty": 1
+        }
+      ],
+      "total": 20500,
+      "paid": 50000,
+      "change": 29500,
+      "createdAt": "2025-12-30T17:06:20.407Z"
+    },
+    {
+      "id": "674e",
+      "items": [
+        {
+          "id": 3,
+          "name": "Kopi Kenangan - Royal Cheese Latte",
+          "price": 12000,
+          "stock": 5,
+          "image": "/images/product/kopikenangan-royalcheese.jpg",
+          "qty": 1
+        },
+        {
+          "id": 4,
+          "name": "Sprite 250 ml",
+          "price": 10000,
+          "stock": 5,
+          "image": "/images/product/sprite.png",
+          "qty": 2
+        },
+        {
+          "id": 5,
+          "name": "Kit Kat 4F",
+          "price": 13500,
+          "stock": 15,
+          "image": "/images/product/kitkat.jpg",
+          "qty": 1
+        }
+      ],
+      "total": 45500,
+      "paid": 50000,
+      "change": 4500,
+      "createdAt": "2025-12-30T17:09:27.918Z"
+    },
+    {
+      "id": "9d86",
+      "items": [
+        {
+          "id": 3,
+          "name": "Kopi Kenangan - Royal Cheese Latte",
+          "price": 12000,
+          "stock": 5,
+          "image": "/images/product/kopikenangan-royalcheese.jpg",
+          "qty": 1
+        },
+        {
+          "id": 1,
+          "name": "Coca Cola 250 ml",
+          "price": 8000,
+          "stock": 10,
+          "image": "/images/product/cocacola250.jpg",
+          "qty": 1
+        },
+        {
+          "id": 6,
+          "name": "Sari Roti - Choco Cheese Bun",
+          "price": 7000,
+          "stock": 12,
+          "image": "/images/product/sariroti-chococheesebun.jpg",
+          "qty": 1
+        }
+      ],
+      "total": 27000,
+      "paid": 30000,
+      "change": 3000,
+      "createdAt": "2025-12-30T19:12:07.723Z"
+    },
+    {
+      "id": "61fb",
+      "items": [
+        {
+          "id": 4,
+          "name": "Sprite 250 ml",
+          "price": 10000,
+          "stock": 5,
+          "image": "/images/product/sprite.png",
+          "qty": 1
+        }
+      ],
+      "total": 10000,
+      "paid": 10000,
+      "change": 0,
+      "createdAt": "2025-12-30T19:43:35.222Z"
+    },
+    {
+      "id": "9112",
+      "items": [
+        {
+          "id": 3,
+          "name": "Kopi Kenangan - Royal Cheese Latte",
+          "price": 12000,
+          "stock": 5,
+          "image": "/images/product/kopikenangan-royalcheese.jpg",
+          "qty": 1
+        }
+      ],
+      "total": 12000,
+      "paid": 20000,
+      "change": 8000,
+      "createdAt": "2025-12-30T19:43:57.581Z"
+    },
+    {
+      "id": "a424",
+      "items": [
+        {
+          "id": 2,
+          "name": "Kopi Kenangan - Caffe Latte",
+          "price": 7500,
+          "stock": 5,
+          "image": "/images/product/kopikenangan-caffelatte.jpg",
+          "qty": 1
+        }
+      ],
+      "total": 7500,
+      "paid": 10000,
+      "change": 2500,
+      "createdAt": "2025-12-30T19:46:43.380Z"
+    },
+    {
+      "id": "f9b3",
+      "items": [
+        {
+          "id": 1,
+          "name": "Coca Cola 250 ml",
+          "price": 8000,
+          "stock": 10,
+          "image": "/images/product/cocacola250.jpg",
+          "qty": 1
+        }
+      ],
+      "total": 8000,
+      "paid": 10000,
+      "change": 2000,
+      "createdAt": "2025-12-30T20:00:31.639Z"
+    },
+    {
+      "id": "5713",
+      "items": [
+        {
+          "id": 3,
+          "name": "Kopi Kenangan - Royal Cheese Latte",
+          "price": 12000,
+          "stock": 5,
+          "image": "/images/product/kopikenangan-royalcheese.jpg",
+          "qty": 1
+        },
+        {
+          "id": 4,
+          "name": "Sprite 250 ml",
+          "price": 10000,
+          "stock": 5,
+          "image": "/images/product/sprite.png",
+          "qty": 2
+        }
+      ],
+      "total": 32000,
+      "paid": 35000,
+      "change": 3000,
+      "createdAt": "2025-12-30T20:11:13.166Z"
+    }
+  ]
+}
